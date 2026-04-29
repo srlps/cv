@@ -10,10 +10,10 @@ Tech Lead con foco arquitectónico), sin inflar responsabilidades pasadas.
 
 ## Proceso de trabajo
 - Revisamos el CV **por secciones**, una a la vez. Orden actual:
-  1. Experiencia laboral (en curso, cronológicamente desde la más antigua).
-  2. (Pendiente) Resumen / summary.
-  3. (Pendiente) Aptitudes principales (sidebar).
-  4. (Pendiente) Aptitudes detalladas.
+  1. Experiencia laboral (completo).
+  2. Resumen / summary (completo).
+  3. Aptitudes principales (sidebar) (completo).
+  4. Aptitudes detalladas (completo).
   5. (Pendiente) Certificaciones, idiomas, voluntariado, formación.
   6. (Pendiente) Metadatos del HTML (`<title>`, etc.).
 - Para cada trabajo: el usuario narra libremente lo que hizo, el asistente
@@ -35,6 +35,66 @@ Tech Lead con foco arquitectónico), sin inflar responsabilidades pasadas.
 - Incluir un párrafo introductorio breve por puesto que dé contexto del
   producto y del equipo (tamaño, composición, posición del usuario en él).
 - Sin métricas inventadas. Si no hay datos confiables, se omiten.
+
+## Decisiones de formato y estética
+
+### Subtítulo de cada empleo (`p.job-company`)
+Formato: `Empresa - Ciudad, País · Modalidad · Idioma`. La modalidad
+(Remoto/Presencial · Remote/On-site) y el idioma de trabajo
+(Español/Inglés · Spanish/English) van **en el subtítulo** y NO se repiten
+en la descripción del puesto. Esto evita redundancia y aligera la lectura.
+
+### Justificado de texto
+Los párrafos descriptivos y los bullets dentro de `.job` están justificados
+(`text-align: justify` en `.job p` y `.job ul li`, definido en `CV_SR.css`).
+
+### Formato de cabecera para empleos en consultora
+Cuando el empleador es una consultora y el trabajo real fue para un cliente
+final, el primer párrafo del puesto sigue el patrón establecido en Aditi y
+se replica en Globant y P&T:
+
+```
+Cliente: <link>NombreCliente</link> (País) — <descriptor breve> (MM/AAAA – MM/AAAA).
+```
+
+Si hay un proyecto/producto identificable separado del cliente, se incluye
+también enlazado (ej. Aditi → Wabtec + PDS 2.0). Aditi además mantiene un
+formato de "lista de clientes" porque se esperan más asignaciones (bench).
+El segundo párrafo describe equipo, sistema y contexto.
+
+## Sección de Aptitudes (skills)
+
+### Aptitudes Principales (sidebar)
+Subset corto (5–7 ítems) y diferenciador alineado al objetivo
+(arquitectura backend Java). Mezcla lenguaje + frameworks + arquitectura +
+infra. Evita ítems genéricos (Docker se omite si está Kubernetes).
+
+### Aptitudes detalladas — bloques
+Bloques actuales (en este orden):
+1. **Lenguajes de programación** — cada lenguaje lleva minidescripción en
+   `<em>` indicando peso real (principal / secundario / formación / complementario).
+2. **Frameworks y plataformas backend**.
+3. **Arquitectura y diseño** — incluye keywords reconocibles (CQRS,
+   hexagonal, event-driven). Cuando el conocimiento no es total se aclara
+   entre paréntesis en `<em>` (ej. *experiencia en sistema diseñado bajo
+   este enfoque*, *adoptada y replicada en producción*).
+4. **Bases de datos** — separadas en *Relacionales* y *No relacionales*.
+5. **Cloud y despliegue** — un bullet por proveedor, diferenciando
+   `(uso directo)` vs `(exposición)`. Incluye CI/CD aquí.
+6. **Testing** — bloque propio.
+7. **Otras herramientas** — cajón final para piezas pequeñas y heterogéneas
+   que no caben en las categorías anteriores.
+
+### Reglas para skills
+- **Honestidad sobre profundidad**: usar `(uso directo)` / `(exposición)` /
+  `(nivel introductorio)` / `(en adopción)` cuando aplique. No inflar.
+- **Soft skills NO van** en la sección de aptitudes (que es hard skills).
+  Cosas como "documentación de decisiones técnicas" se quedan implícitas en
+  el summary y en los bullets de experiencia.
+- **Omitir tecnologías irrelevantes al objetivo** aunque se hayan tocado
+  (ej. Unity → fuera).
+- **Spring Data**: se omite porque el usuario lo conoce pero no lo usó en
+  proyectos reales.
 
 ## Convención de títulos de puesto
 Cuando el título oficial difiere del estándar reconocible para reclutadores

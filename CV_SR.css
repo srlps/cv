@@ -230,8 +230,16 @@ p + p {
   margin-bottom: 1.5mm;
 }
 
+.job p {
+  text-align: justify;
+}
+
 .job ul {
   margin-top: 1.5mm;
+}
+
+.job ul li {
+  text-align: justify;
 }
 
 /* Force a page break (used to push content to the next A4 page) */
