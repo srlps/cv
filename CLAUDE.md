@@ -14,7 +14,7 @@ Tech Lead con foco arquitectónico), sin inflar responsabilidades pasadas.
   2. Resumen / summary (completo).
   3. Aptitudes principales (sidebar) (completo).
   4. Aptitudes detalladas (completo).
-  5. (Pendiente) Certificaciones, idiomas, voluntariado, formación.
+  5. Certificaciones, idiomas, voluntariado, formación (completo).
   6. (Pendiente) Metadatos del HTML (`<title>`, etc.).
 - Para cada trabajo: el usuario narra libremente lo que hizo, el asistente
   pregunta los huecos relevantes, se redacta una propuesta, se aprueba y
@@ -95,6 +95,36 @@ Bloques actuales (en este orden):
   (ej. Unity → fuera).
 - **Spring Data**: se omite porque el usuario lo conoce pero no lo usó en
   proyectos reales.
+
+## Sidebar: Certificaciones / Idiomas / Voluntariado
+
+### Orden
+Dentro del sidebar el orden es: Aptitudes principales → Aptitudes detalladas
+→ **Idiomas** → **Certificaciones** → **Voluntariado**. Idiomas se sube
+porque para roles internacionales pesa más que las certificaciones.
+
+### Idiomas
+Usar nivel CEFR + descriptor estándar (ej. *C1 / Profesional*) en lugar de
+"Avanzado". Más legible para reclutadores internacionales.
+
+### Certificaciones
+- Solo certificaciones vigentes y relevantes al objetivo. Se descartó
+  Platzi 2019 (desactualizada y nivel introductorio frente a perfil senior).
+- PMI: nombre oficial completo *Diploma Internacional en Gerencia de
+  Proyectos (PMBOK / PMI)*, emisor real *ILEN · Universidad Nacional de
+  Ingeniería (UNI), Perú*, fecha *Noviembre 2022*, duración *130 horas*.
+- Certificaciones en curso se incluyen marcadas como *En curso (AAAA)*
+  cuando son relevantes al objetivo (ej. arquitectura LLM por BSG / IEEE).
+
+### Voluntariado
+Roles históricos. Se añade un `<p><em>Roles históricos.</em></p>` debajo
+del `<h2>` para señalarlo sin tener que poner fechas exactas (no recordadas).
+Se agregó **Madada** (profesor de fundamentos de programación en Java).
+
+## Formación
+Solo Bachiller (UNMSM, Ingeniería de Sistemas, 03/2012 – 06/2019). Se
+añade nota *Tesis en desarrollo para titulación profesional* para señalar
+que el bachiller no es el techo académico actual.
 
 ## Convención de títulos de puesto
 Cuando el título oficial difiere del estándar reconocible para reclutadores
