@@ -1,7 +1,22 @@
 # Acuerdos para la edición del CV
 
-Este documento captura las decisiones tomadas durante la revisión y mejora del CV
-(`CV_SR_editable.html` en español y `CV_SR_editable_english.html` en inglés).
+Este documento captura las decisiones tomadas durante la revisión y mejora del CV.
+
+## Archivos del repo
+Hay dos versiones del CV en dos idiomas (4 archivos HTML + 1 CSS compartido):
+
+| Archivo | Idioma | Versión | Propósito |
+|---|---|---|---|
+| `CV_SR_detailed_es.html` | ES | Detallada | Source of truth de la historia profesional completa. Sirve también como contexto para que un LLM genere variantes cortas u orientadas a otros roles. NO se envía como PDF a postulaciones por defecto (queda en ~5 páginas). |
+| `CV_SR_detailed_en.html` | EN | Detallada | Equivalente en inglés del anterior. |
+| `CV_SR_short_es.html` | ES | Compacta | **Versión a postular** para roles senior dev → arquitecto. Objetivo: 2 páginas. Derivada de la detallada. |
+| `CV_SR_short_en.html` | EN | Compacta | Equivalente en inglés del anterior. |
+| `CV_SR.css` | — | — | Estilo compartido por las 4 versiones. Cambios visuales (sidebar width, justificado, etc.) aplican a todas simultáneamente. |
+| `profile_pic.jpeg` | — | — | Foto referenciada por todos los HTML. |
+
+Los cambios se aplican en **ambos idiomas** simultáneamente. Cuando el cambio es de
+contenido editorial, se aplica primero en la versión detallada; la compacta se
+regenera/ajusta a partir de ahí.
 
 ## Objetivo del CV
 Reposicionar el perfil de **"Desarrollador Backend"** a un perfil orientado a
@@ -197,6 +212,75 @@ van al CV.
   oscilación quedan para entrevista.
 - **Globant / salida**: dejó Globant porque Aditi le ofreció algo mejor.
   Estándar omitir motivos de salida en el CV.
+
+## Versión compacta (`CV_SR_short_*.html`)
+
+Versión derivada de la detallada, optimizada para postular a roles **Senior
+Backend Developer con miras a arquitecto** (2 páginas objetivo). Reusa el
+mismo `CV_SR.css`. Decisiones de poda específicas de la compacta:
+
+### Header / summary
+- Resumen acortado a ~5 líneas. Se elimina la enumeración explícita de
+  dominios (banca/ferrocarriles/etc. se mantiene; *e-procurement* y
+  detalles secundarios se condensan). Se conserva el posicionamiento de
+  arquitectura y la mención CTO ×2.
+
+### Sidebar
+- Orden ajustado: **Contacto → Aptitudes Principales → Idiomas →
+  Certificaciones → Formación**. Formación baja al sidebar como bloque
+  mínimo (título + universidad + años) para liberar espacio en el main.
+- **Voluntariado: fuera** en la compacta. No aporta a roles senior técnicos
+  y consume espacio. Se mantiene en la detallada.
+- **Certificaciones**: cada una colapsada a una sola línea
+  (`emisor · año` o `emisor · estado`). Sin duración en horas ni nombre
+  académico extendido.
+- **Formación**: se omite la nota de tesis para ahorrar línea.
+
+### Experiencia
+- **Puestos detallados: 5** (Origen 360, Aditi, Globant, Anka, Ebiz). Los
+  dos puestos antiguos y cortos se colapsan en una sola línea final:
+  > *Experiencia previa: Process & Technology Solutions (Entel, ...) y
+  > Target HR (Intralot, UNICON, ...). Detalle disponible bajo solicitud.*
+  Justificación: ambos son <5 meses, >6 años atrás, no aportan al
+  posicionamiento senior/arquitecto y su detalle ya vive en la versión
+  detallada.
+- **Bullets por puesto: 3–4** (vs 5–7 en la detallada). Se priorizan los
+  que muestran *diseñé / co-diseñé / lideré / definí*. Se fusionan o
+  eliminan los de implementación pura, mantenimiento evolutivo y los
+  contextos de equipo extensos.
+- Se conservan los **párrafos introductorios** pero recortados (mismo
+  patrón consultora→cliente; equipo descrito en una frase, no en dos).
+- **Línea `Stack:`** se mantiene íntegra (es valor denso, no se recorta).
+- **Anka**: se omite el bullet de la línea VR/Unity (irrelevante al
+  objetivo). Firebase Auth y MapStruct se omiten como bullets propios pero
+  se conservan en la línea Stack.
+- **Globant**: el bullet de mantenimiento evolutivo y el bullet de
+  Python se fusionan al de TIR/XIRR o se compactan.
+- **Ebiz**: los microservicios de archivos y logs se fusionan en un
+  bullet único; notificaciones (Twilio/SendGrid) y service evaluation se
+  omiten por menor peso arquitectónico.
+
+### Aptitudes
+- Cada categoría se reduce a **1 línea agrupada** (CSV con `·` o coma),
+  no listas verticales largas.
+- Se quitan los matices de profundidad `(uso directo)` / `(exposición)` /
+  `(nivel introductorio)` / `(en adopción)`. Se conservan solo los de
+  lenguajes (`(principal)` / `(secundario)` / `(complementario)`) porque
+  diferencian el perfil.
+- **Bloque Testing**: fusionado al cajón "Otros".
+- **JasperReports, Apache Tomcat**: omitidos en la compacta (no aportan al
+  objetivo).
+- Categorías finales: Lenguajes · Backend · Arquitectura y diseño · Bases
+  de datos · Cloud y despliegue · Otros.
+
+### Reglas para mantener sincronizadas detallada y compacta
+- Los cambios **editoriales de fondo** (nuevo trabajo, cambio de título,
+  reescritura de bullet clave) se aplican primero en la detallada y luego
+  se reflejan en la compacta.
+- Los cambios **de poda específicos de la compacta** (ej. quitar un
+  bullet) NO se replican hacia la detallada.
+- Los cambios de **links / datos de contacto / metadatos** se aplican en
+  los 4 archivos a la vez.
 
 ## Estado del progreso (experiencia laboral)
 - [x] **Ebiz Latin America** (06/2017 – 09/2018) — aplicado en ES y EN.
