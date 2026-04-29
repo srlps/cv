@@ -175,10 +175,6 @@
                 plan once the product validates traction.
               </li>
               <li>
-                <strong>Hands-on backend implementation</strong>, plus active involvement in
-                product decisions alongside the founding team.
-              </li>
-              <li>
                 <em>Stack:</em> Java 21, Quarkus, Python, PostgreSQL, Keycloak, AWS (EC2).
               </li>
             </ul>
@@ -194,7 +190,7 @@
               Client: <a class="link" href="https://www.wabteccorp.com/"><strong>Wabtec</strong></a>
               (USA) —
               <a class="link" href="https://www.wabteccorp.com/newsroom/press-releases/wabtec-advances-rail-network-optimization-for-cn-with-the-launch-of-its-precision-dispatch-system"><strong>PDS 2.0</strong></a>
-              project (05/2022 – 03/2026), with North American stakeholders. Currently between assignments.
+              project (05/2022 – 03/2026), with North American stakeholders.
             </p>
             <p>
               PDS 2.0 is the next generation of Wabtec's <em>Precision Dispatch System</em> for
@@ -232,9 +228,6 @@
                 Actively contributed to <strong>end-to-end designs together with the tech lead</strong>,
                 proposing alternatives and validating trade-offs before each solution became the
                 final design in the user stories.
-              </li>
-              <li>
-                Peer code reviews as the team's standard practice.
               </li>
               <li>
                 <em>Stack:</em> Java 21, Quarkus, Kafka (with a centralized message-routing
@@ -275,13 +268,11 @@
               </li>
               <li>
                 <strong>Diagnosed and fixed a critical numerical-precision bug</strong> in the IRR
-                calculation (Excel's <code>XIRR</code> function) that produced incorrect accounting
-                entries in one category: the Java library ran Newton's method over <code>BigDecimal</code>
-                powers, but fractional exponents fell back to <code>Math.pow</code> on <code>double</code>
-                (native <code>BigDecimal.pow</code> only accepts integer exponents), which for certain
-                inputs made the approximation oscillate without converging. I replaced the operation with
-                a library supporting <code>BigDecimal</code>-to-<code>BigDecimal</code> exponentiation and
-                tuned the decimal precision of the calculation.
+                calculation (<code>XIRR</code>) that produced incorrect accounting entries: the Java
+                library fell back to <code>Math.pow</code> on <code>double</code> for fractional
+                exponents over <code>BigDecimal</code>, losing convergence. I replaced it with a
+                library supporting <code>BigDecimal</code>-to-<code>BigDecimal</code> exponentiation
+                and tuned the decimal precision.
               </li>
               <li>
                 Strengthened my command of <strong>Python</strong> as a secondary language, mainly on the
@@ -381,8 +372,6 @@
               </li>
             </ul>
           </article>
-
-          <div class="page-break"></div>
 
           <article class="job">
             <div class="job-header">

@@ -11,9 +11,9 @@
 
   --page-width: 210mm;
   --page-height: 297mm;
-  --sidebar-width: 75mm;
-  --photo-size: 75mm;
-  --photo-img: 55mm;
+  --sidebar-width: 60mm;
+  --photo-size: 60mm;
+  --photo-img: 45mm;
 }
 
 * {
@@ -42,7 +42,6 @@ body {
   margin: 0 auto;
   background: #fff;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
 }
 
 /* ---------- Header ---------- */
@@ -257,6 +256,11 @@ p + p {
 /* ---------- Print (A4) ---------- */
 @page {
   size: A4;
+  margin: 12mm 0;
+}
+
+/* First page is full-bleed so the colored header reaches the top edge */
+@page :first {
   margin: 0;
 }
 
@@ -272,18 +276,30 @@ p + p {
 
   .cv {
     width: var(--page-width);
-    min-height: var(--page-height);
+    min-height: 0;
     margin: 0;
     box-shadow: none;
   }
 
-  /* Avoid splitting blocks awkwardly across pages */
-  section,
+  /* Keep the colored header together at the top of page 1 */
+  .cv-header {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Avoid splitting small blocks awkwardly across pages.
+     Note: do NOT add this to <section>, since the Experience section
+     spans multiple pages and would otherwise force a giant blank gap. */
   .job,
   .section-block,
   .skills-group {
     break-inside: avoid;
     page-break-inside: avoid;
+  }
+
+  h2 {
+    break-after: avoid;
+    page-break-after: avoid;
   }
 
   a.link {

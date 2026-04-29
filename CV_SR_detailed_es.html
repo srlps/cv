@@ -176,10 +176,6 @@
                 documentadas con plan explícito de evolución cuando el producto valide tracción.
               </li>
               <li>
-                <strong>Implementación hands-on del backend</strong>, además de participación
-                activa en las decisiones de producto junto al equipo fundador.
-              </li>
-              <li>
                 <em>Stack:</em> Java 21, Quarkus, Python, PostgreSQL, Keycloak, AWS (EC2).
               </li>
             </ul>
@@ -195,7 +191,7 @@
               Cliente: <a class="link" href="https://www.wabteccorp.com/"><strong>Wabtec</strong></a>
               (USA) — proyecto
               <a class="link" href="https://www.wabteccorp.com/newsroom/press-releases/wabtec-advances-rail-network-optimization-for-cn-with-the-launch-of-its-precision-dispatch-system"><strong>PDS 2.0</strong></a>
-              (05/2022 – 03/2026), con stakeholders en Norteamérica. Actualmente entre asignaciones.
+              (05/2022 – 03/2026), con stakeholders en Norteamérica.
             </p>
             <p>
               PDS 2.0 es la nueva generación del <em>Precision Dispatch System</em> de Wabtec para
@@ -237,9 +233,6 @@
                 como diseño final en las historias.
               </li>
               <li>
-                Code reviews entre pares como práctica estándar del equipo.
-              </li>
-              <li>
                 <em>Stack:</em> Java 21, Quarkus, Kafka (con servicio centralizado de routing de
                 mensajes), PostgreSQL sobre AWS RDS, AWS EKS, Liquibase, Jenkins + GitLab CI/CD,
                 Grafana.
@@ -279,14 +272,11 @@
               </li>
               <li>
                 <strong>Diagnostiqué y resolví un bug crítico de precisión numérica</strong> en el
-                cálculo de TIR (función <code>XIRR</code> de Excel) que provocaba asientos contables
-                incorrectos en una categoría: la librería Java aplicaba el método de Newton sobre
-                potencias de <code>BigDecimal</code>, pero al requerir exponentes fraccionarios caía en
-                <code>Math.pow</code> con <code>double</code> (<code>BigDecimal.pow</code> nativo solo
-                admite exponentes enteros), lo que con ciertos valores hacía oscilar la aproximación sin
-                converger. Reemplacé la operación por una librería con soporte de potencia
-                <code>BigDecimal</code>-a-<code>BigDecimal</code> y ajusté la precisión decimal del
-                cálculo.
+                cálculo de TIR (función <code>XIRR</code>) que generaba asientos contables incorrectos:
+                la librería Java caía en <code>Math.pow</code> con <code>double</code> al requerir
+                exponentes fraccionarios sobre <code>BigDecimal</code>, perdiendo convergencia.
+                Lo reemplacé por una librería con potencia <code>BigDecimal</code>-a-<code>BigDecimal</code>
+                y ajusté la precisión decimal.
               </li>
               <li>
                 Fortalecí mi dominio de <strong>Python</strong> como lenguaje secundario, principalmente
@@ -390,8 +380,6 @@
               </li>
             </ul>
           </article>
-
-          <div class="page-break"></div>
 
           <article class="job">
             <div class="job-header">
