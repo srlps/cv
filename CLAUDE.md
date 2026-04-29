@@ -15,7 +15,7 @@ Tech Lead con foco arquitectónico), sin inflar responsabilidades pasadas.
   3. Aptitudes principales (sidebar) (completo).
   4. Aptitudes detalladas (completo).
   5. Certificaciones, idiomas, voluntariado, formación (completo).
-  6. (Pendiente) Metadatos del HTML (`<title>`, etc.).
+  6. Contacto y metadatos del HTML (completo).
 - Para cada trabajo: el usuario narra libremente lo que hizo, el asistente
   pregunta los huecos relevantes, se redacta una propuesta, se aprueba y
   recién ahí se aplica al HTML.
@@ -209,6 +209,27 @@ van al CV.
 - [x] **Origen 360 / Pezconfiable** (11/2025 – actualidad) — CTO. Startup peruana de pesca artesanal + trazabilidad. Colaboración por entregables (no fulltime, no part-time formal; freelance-like). Stack Java 21 + Quarkus + Python + PostgreSQL + Keycloak + AWS EC2. Equipo: 1 back (usuario) + 1 front, con LLMs como acelerador. Aplicado ES/EN arriba de Aditi.
 
 **Nota sobre solapes**: Decidido NO mencionar explícitamente que Origen 360 corre en paralelo a Aditi; las fechas hablan solas (consistente con el tratamiento de Anka/P&T anterior, donde tampoco se etiquetó "paralelo" en el bullet final).
+
+## Contacto y metadatos del HTML
+
+### Sección de contacto
+- **Dirección física completa: fuera.** Reemplazada por ubicación simple
+  `Lima, Perú · GMT-5` (`Lima, Peru · GMT-5` en EN). Reduce PII innecesaria
+  y aporta el dato realmente útil para roles remotos/internacionales:
+  ciudad y zona horaria.
+- Se mantienen teléfono (con código de país), email y LinkedIn.
+- GitHub / portfolio: pendiente de decisión del usuario sobre cómo
+  presentar miniproyectos personales.
+
+### Metadatos HTML
+- **`<title>` único cambio relevante** porque algunos conversores
+  HTML→PDF lo usan como título del documento PDF. Estandarizado a
+  `Sergio Robles - CV - Arquitecto de Software Backend` /
+  `Sergio Robles - CV - Backend Software Architect`.
+- `lang="es"` / `lang="en"` se mantiene (importa para accesibilidad
+  en lectores de PDF).
+- `<meta description>`, keywords, OG tags: **omitidos** porque el CV se
+  envía como PDF, no se publica como página web.
 
 ## Información pendiente de aclarar (global)
 - Métricas de impacto por proyecto (volúmenes, escala, tamaño de equipos
