@@ -148,7 +148,8 @@ Ejemplo aplicado: *"Programador de Soluciones (Desarrollador Backend Junior)"*.
 | Empresa / Cliente | Producto | URL |
 |---|---|---|
 | Ebiz Latin America | B2miningdata | https://ebiz.pe/soluciones/b2m/ |
-| Anka Innovations | EDAN (INDECI) | https://portal.indeci.gob.pe/respuesta/edan/ |
+| Anka Innovations | EDAN (proyecto) | https://portal.indeci.gob.pe/respuesta/edan/ |
+| Anka Innovations | INDECI (cliente) | https://www.gob.pe/indeci |
 | Globant | Lulo Bank | https://www.lulobank.com/ |
 | Aditi Consulting | Wabtec (corporativo) | https://www.wabteccorp.com/ |
 | Aditi Consulting | Wabtec PDS / cliente CN (nota de prensa) | https://www.wabteccorp.com/newsroom/press-releases/wabtec-advances-rail-network-optimization-for-cn-with-the-launch-of-its-precision-dispatch-system |
