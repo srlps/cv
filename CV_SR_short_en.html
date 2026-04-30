@@ -166,10 +166,10 @@
             </p>
             <ul>
               <li>
-                <strong>Designed <code>number-pool</code></strong>, an internal library for
-                concurrent reservation of correlative identifiers; ships its own schema via
-                <strong>Liquibase</strong> migrations packaged inside the Maven artifact. Adopted
-                by 2 services in the product.
+                <strong>Designed an internal library for concurrent reservation of correlative
+                identifiers</strong>; ships its own schema via <strong>Liquibase</strong>
+                migrations packaged inside the Maven artifact. Adopted by 2 services in the
+                product.
               </li>
               <li>
                 <strong>Co-designed with the tech lead</strong> the parent-child state management
@@ -177,8 +177,8 @@
                 <em>design docs</em> reviewed before being turned into user stories.
               </li>
               <li>
-                <strong>Led the implementation of R43</strong>, the restriction type with the most
-                complex business logic in the module, and refined the shared library to eliminate
+                <strong>Led the implementation of the restriction type with the most complex
+                business logic in the module</strong> and refined the shared library to eliminate
                 redundant database reads/writes.
               </li>
               <li>
@@ -210,9 +210,10 @@
                 previous version carrying bugs and unstable patches.
               </li>
               <li>
-                <strong>Diagnosed and fixed a critical numerical-precision bug</strong> in the IRR
-                calculation (<code>XIRR</code>) that produced incorrect accounting entries due to
-                loss of convergence with <code>Math.pow</code> on <code>double</code>.
+                <strong>Diagnosed and fixed a numerical-precision defect</strong> in the IRR
+                calculation (<code>XIRR</code>) caused by loss of convergence with
+                <code>Math.pow</code> on <code>double</code>; replaced it with a library supporting
+                <code>BigDecimal</code>-to-<code>BigDecimal</code> exponentiation.
               </li>
               <li>
                 Owned evolutive maintenance of the main Spring Batch job and strengthened

@@ -316,6 +316,37 @@ mismo `CV_SR.css`. Decisiones de poda específicas de la compacta:
 - `<meta description>`, keywords, OG tags: **omitidos** porque el CV se
   envía como PDF, no se publica como página web.
 
+## Confidencialidad / NDA
+
+Pasada de revisión sobre el historial laboral para evitar exponer información
+cubierta por NDA o que dañe reputacionalmente a clientes. Criterios aplicados:
+
+- **No nombrar artefactos internos por su nombre código**: librerías, módulos
+  o tipos de entidad con nombres internos (ej. `number-pool`, `R43`) se
+  describen por **función** ("librería interna de reserva concurrente de
+  identificadores correlativos", "el tipo de restricción con la lógica de
+  negocio más compleja del módulo"). Aporta lo mismo al lector y no es
+  trazable de vuelta al producto.
+- **No atribuir defectos en producción al cliente**: describir el defecto
+  técnico que el usuario resolvió, sin mencionar el impacto de negocio que
+  haya tenido en el cliente. Aplicado a Lulo Bank: se conserva el detalle
+  técnico (XIRR / `BigDecimal` / convergencia) y se elimina "generaba
+  asientos contables incorrectos".
+- **No describir madurez/precariedad del cliente**: comentarios tipo "sin
+  CI/CD", "despliegue manual", "sin tests" se omiten o suavizan; pintan
+  mal al cliente y a la consultora sin aportar al perfil. Aplicado a P&T /
+  Entel.
+- **No exponer topología interna de infraestructura**: cifras concretas de
+  cluster (nº de masters/workers), VPC, subredes, etc. se reemplazan por la
+  tecnología sin la cifra. Aplicado a Ebiz (AKS sin "2 masters + 5 workers").
+- **Sí se conservan**: nombre del cliente y del producto cuando ya son
+  públicos (notas de prensa, sitios oficiales, contratos públicos), nombre
+  de obligaciones regulatorias públicas (ej. TDA), tecnologías y patrones
+  arquitectónicos, descripción funcional del módulo.
+
+Anécdotas con detalle sensible que sí pueden contarse en entrevista (no en
+CV) van a la sección **"Anécdotas y contenido reservado para entrevista"**.
+
 ## Información pendiente de aclarar (global)
 - Métricas de impacto por proyecto (volúmenes, escala, tamaño de equipos
   liderados).

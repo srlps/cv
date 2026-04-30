@@ -164,20 +164,19 @@
             </p>
             <ul>
               <li>
-                <strong>Diseñé <code>number-pool</code></strong>, librería interna de gestión y
-                reserva concurrente de identificadores; provee su propio esquema vía
-                <strong>Liquibase</strong> empaquetado en el artefacto Maven. Adoptada por 2
-                servicios del producto.
+                <strong>Diseñé una librería interna de reserva concurrente de identificadores
+                correlativos</strong>; provee su propio esquema vía <strong>Liquibase</strong>
+                empaquetado en el artefacto Maven. Adoptada por 2 servicios del producto.
               </li>
               <li>
-                <strong>Co-diseñé con el tech lead</strong> el manejo de estado padre-hijo de
-                restricciones, los flujos de edición y de copia; documenté las soluciones en
-                <em>design docs</em> revisados antes de pasar a historias de usuario.
+                <strong>Co-diseñé con el tech lead</strong> el manejo de estado de relaciones
+                padre-hijo entre restricciones y los flujos de edición y de copia; documenté las
+                soluciones en <em>design docs</em> revisados antes de pasar a historias de usuario.
               </li>
               <li>
-                <strong>Lideré la implementación de R43</strong>, el tipo de restricción con la
-                lógica de negocio más compleja del módulo, y refiné la librería común para
-                eliminar lecturas/escrituras redundantes.
+                <strong>Lideré la implementación del tipo de restricción con la lógica de negocio
+                más compleja del módulo</strong> y refiné la librería común para eliminar
+                lecturas/escrituras redundantes.
               </li>
               <li>
                 Participé activamente en <strong>diseños end-to-end junto al tech lead</strong>,
@@ -208,9 +207,10 @@
                 reemplazó una versión previa con bugs y parches inestables.
               </li>
               <li>
-                <strong>Diagnostiqué y resolví un bug crítico de precisión numérica</strong> en el
-                cálculo de TIR (<code>XIRR</code>) que generaba asientos contables incorrectos
-                debido a pérdida de convergencia con <code>Math.pow</code> sobre <code>double</code>.
+                <strong>Diagnostiqué y resolví un defecto de precisión numérica</strong> en el
+                cálculo de TIR (<code>XIRR</code>) por pérdida de convergencia con
+                <code>Math.pow</code> sobre <code>double</code>; lo reemplacé por una librería con
+                potencia <code>BigDecimal</code>-a-<code>BigDecimal</code>.
               </li>
               <li>
                 Asumí el mantenimiento evolutivo del job principal en Spring Batch y fortalecí

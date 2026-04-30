@@ -203,24 +203,22 @@
             </p>
             <ul>
               <li>
-                <strong>Diseñé <code>number-pool</code></strong>, librería interna de gestión y reserva
-                concurrente de identificadores correlativos para restricciones; provee su propio
-                esquema vía migraciones <strong>Liquibase</strong> empaquetadas en el artefacto Maven,
-                manejo de concurrencia y persistencia delegada al esquema del servicio consumidor.
-                Adoptada por 2 servicios del producto.
+                <strong>Diseñé una librería interna de reserva concurrente de identificadores
+                correlativos</strong> para restricciones; provee su propio esquema vía migraciones
+                <strong>Liquibase</strong> empaquetadas en el artefacto Maven, manejo de concurrencia
+                y persistencia delegada al esquema del servicio consumidor. Adoptada por 2 servicios
+                del producto.
               </li>
               <li>
-                <strong>Lideré la implementación de R43</strong>, el tipo de restricción con la lógica
-                de negocio más compleja del módulo (edición post-aprobación, copia de documentos,
-                casos de uso fuera del flujo común), aportando criterio técnico ante el tech lead
+                <strong>Lideré la implementación del tipo de restricción con la lógica de negocio
+                más compleja del módulo</strong>, aportando criterio técnico ante el tech lead
                 durante el diseño.
               </li>
               <li>
-                <strong>Co-diseñé con el tech lead</strong> el manejo de estado de restricciones
-                padre-hijo (una restricción padre puede generar 0..N restricciones hijo con ciclos
-                de vida acoplados), el flujo de edición y el flujo de copia de restricciones;
-                documenté las soluciones en <em>design docs</em> revisados antes de pasar a historias
-                de usuario.
+                <strong>Co-diseñé con el tech lead</strong> el manejo de estado de relaciones
+                padre-hijo entre restricciones (una padre puede generar 0..N hijas con ciclos de
+                vida acoplados) y los flujos de edición y de copia; documenté las soluciones en
+                <em>design docs</em> revisados antes de pasar a historias de usuario.
               </li>
               <li>
                 <strong>Refiné la librería común</strong> que generaliza comportamientos entre tipos
@@ -271,12 +269,12 @@
                 corrección de defectos) sobre el job principal en <strong>Spring Batch</strong>.
               </li>
               <li>
-                <strong>Diagnostiqué y resolví un bug crítico de precisión numérica</strong> en el
-                cálculo de TIR (función <code>XIRR</code>) que generaba asientos contables incorrectos:
-                la librería Java caía en <code>Math.pow</code> con <code>double</code> al requerir
-                exponentes fraccionarios sobre <code>BigDecimal</code>, perdiendo convergencia.
-                Lo reemplacé por una librería con potencia <code>BigDecimal</code>-a-<code>BigDecimal</code>
-                y ajusté la precisión decimal.
+                <strong>Diagnostiqué y resolví un defecto de precisión numérica</strong> en el
+                cálculo de TIR (función <code>XIRR</code>): la librería Java caía en
+                <code>Math.pow</code> con <code>double</code> al requerir exponentes fraccionarios
+                sobre <code>BigDecimal</code>, perdiendo convergencia. Lo reemplacé por una
+                librería con potencia <code>BigDecimal</code>-a-<code>BigDecimal</code> y ajusté
+                la precisión decimal.
               </li>
               <li>
                 Fortalecí mi dominio de <strong>Python</strong> como lenguaje secundario, principalmente
@@ -313,8 +311,7 @@
               <li>
                 Cada integración se entregaba como un microservicio Spring Boot empaquetado como WAR
                 sobre un <strong>Tomcat compartido</strong> que alojaba todas las integraciones del
-                equipo; el despliegue lo orquestaba el DevOps mediante <strong>scripts de Jenkins</strong>
-                ejecutados manualmente (sin CI/CD conectado a repositorio).
+                equipo; el despliegue lo orquestaba el DevOps mediante <strong>scripts de Jenkins</strong>.
               </li>
               <li>
                 Los <strong>diseños de las integraciones</strong> los proponían en conjunto el jefe de
@@ -464,9 +461,8 @@
                 <strong>definición del esquema de red de los nodos de cómputo en Azure (AKS)</strong>.
               </li>
               <li>
-                <em>Stack:</em> Java, Spring Boot, Spring Cloud Netflix (Zuul), Apache Kafka, Azure Storage, AKS
-                (2 masters + 5 workers), Docker, Kubernetes, ELK, Twilio, SendGrid, PostgreSQL, MongoDB, Bitbucket
-                Pipelines.
+                <em>Stack:</em> Java, Spring Boot, Spring Cloud Netflix (Zuul), Apache Kafka, Azure Storage, AKS,
+                Docker, Kubernetes, ELK, Twilio, SendGrid, PostgreSQL, MongoDB, Bitbucket Pipelines.
               </li>
             </ul>
           </article>

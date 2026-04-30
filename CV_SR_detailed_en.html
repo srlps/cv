@@ -201,23 +201,22 @@
             </p>
             <ul>
               <li>
-                <strong>Designed <code>number-pool</code></strong>, an internal library for
-                concurrent reservation and management of correlative identifiers for restrictions;
-                it provides its own schema via <strong>Liquibase</strong> migrations packaged inside
-                the Maven artifact, concurrency handling, and persistence delegated to the consumer
-                service's schema. Adopted by 2 services in the product.
+                <strong>Designed an internal library for concurrent reservation of correlative
+                identifiers</strong> for restrictions; it provides its own schema via
+                <strong>Liquibase</strong> migrations packaged inside the Maven artifact, concurrency
+                handling, and persistence delegated to the consumer service's schema. Adopted by 2
+                services in the product.
               </li>
               <li>
-                <strong>Led the implementation of R43</strong>, the restriction type with the most
-                complex business logic in the module (post-approval editing, document copying, use
-                cases outside the common flow), bringing technical input to the tech lead during
-                design.
+                <strong>Led the implementation of the restriction type with the most complex
+                business logic in the module</strong>, bringing technical input to the tech lead
+                during design.
               </li>
               <li>
                 <strong>Co-designed with the tech lead</strong> the state management of
-                parent-child restrictions (a parent restriction can spawn 0..N child restrictions
-                with coupled lifecycles), the edit flow and the copy flow; documented the solutions
-                in <em>design docs</em> reviewed before being turned into user stories.
+                parent-child relationships between restrictions (a parent can spawn 0..N children
+                with coupled lifecycles) and the edit and copy flows; documented the solutions in
+                <em>design docs</em> reviewed before being turned into user stories.
               </li>
               <li>
                 <strong>Refined the shared library</strong> that generalizes behaviors across
@@ -267,12 +266,12 @@
                 fixes) on the main <strong>Spring Batch</strong> job.
               </li>
               <li>
-                <strong>Diagnosed and fixed a critical numerical-precision bug</strong> in the IRR
-                calculation (<code>XIRR</code>) that produced incorrect accounting entries: the Java
-                library fell back to <code>Math.pow</code> on <code>double</code> for fractional
-                exponents over <code>BigDecimal</code>, losing convergence. I replaced it with a
-                library supporting <code>BigDecimal</code>-to-<code>BigDecimal</code> exponentiation
-                and tuned the decimal precision.
+                <strong>Diagnosed and fixed a numerical-precision defect</strong> in the IRR
+                calculation (<code>XIRR</code>): the Java library fell back to <code>Math.pow</code>
+                on <code>double</code> for fractional exponents over <code>BigDecimal</code>,
+                losing convergence. I replaced it with a library supporting
+                <code>BigDecimal</code>-to-<code>BigDecimal</code> exponentiation and tuned the
+                decimal precision.
               </li>
               <li>
                 Strengthened my command of <strong>Python</strong> as a secondary language, mainly on the
@@ -308,8 +307,7 @@
               <li>
                 Each integration was delivered as a Spring Boot microservice packaged as a WAR on a
                 <strong>shared Tomcat</strong> hosting all team integrations; deployments were
-                orchestrated by the DevOps engineer via <strong>Jenkins scripts</strong> run manually (no
-                repository-driven CI/CD).
+                orchestrated by the DevOps engineer via <strong>Jenkins scripts</strong>.
               </li>
               <li>
                 <strong>Integration designs</strong> were jointly proposed by the consultancy's head of
@@ -456,9 +454,8 @@
                 <strong>definition of the compute node network topology on Azure (AKS)</strong>.
               </li>
               <li>
-                <em>Stack:</em> Java, Spring Boot, Spring Cloud Netflix (Zuul), Apache Kafka, Azure Storage, AKS
-                (2 masters + 5 workers), Docker, Kubernetes, ELK, Twilio, SendGrid, PostgreSQL, MongoDB, Bitbucket
-                Pipelines.
+                <em>Stack:</em> Java, Spring Boot, Spring Cloud Netflix (Zuul), Apache Kafka, Azure Storage, AKS,
+                Docker, Kubernetes, ELK, Twilio, SendGrid, PostgreSQL, MongoDB, Bitbucket Pipelines.
               </li>
             </ul>
           </article>
