@@ -290,7 +290,7 @@ mismo `CV_SR.css`. Decisiones de poda específicas de la compacta:
   *Solape aclarado: Anka era proyecto paralelo como socio/CTO; P&T fue empleo dentro de ese período.*
 - [x] **Globant** (03/2020 – 05/2022) — cliente Lulo Bank, equipo back-processes.
   Título: Desarrollador Backend Semi-Senior / Mid-level Backend Developer. Aplicado ES/EN.
-- [x] **Aditi Consulting** (05/2022 – actualidad) — cliente Wabtec, proyecto PDS 2.0 (cliente final CN, 05/2022 – 03/2026). Stack Java 21 + Quarkus + Kafka + PostgreSQL/AWS RDS + EKS. Proyecto Wabtec **finalizado**; usuario actualmente en bench. Título: Senior. Aplicado ES/EN.
+- [x] **Aditi Consulting** (05/2022 – 04/2026) — cliente Wabtec, proyecto PDS 2.0 (cliente final CN, 05/2022 – 03/2026). Stack Java 21 + Quarkus + Kafka + PostgreSQL/AWS RDS + EKS. Proyecto Wabtec **finalizado**; contrato con Aditi cerrado en 04/2026. Título: Senior. Aplicado ES/EN.
 - [x] **Origen 360 / Pezconfiable** (11/2025 – actualidad) — CTO. Startup peruana de pesca artesanal + trazabilidad. Colaboración por entregables (no fulltime, no part-time formal; freelance-like). Stack Java 21 + Quarkus + Python + PostgreSQL + Keycloak + AWS EC2. Equipo: 1 back (usuario) + 1 front, con LLMs como acelerador. Aplicado ES/EN arriba de Aditi.
 
 **Nota sobre solapes**: Decidido NO mencionar explícitamente que Origen 360 corre en paralelo a Aditi; las fechas hablan solas (consistente con el tratamiento de Anka/P&T anterior, donde tampoco se etiquetó "paralelo" en el bullet final).
