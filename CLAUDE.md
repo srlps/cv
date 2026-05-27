@@ -224,6 +224,11 @@ mismo `CV_SR.css`. Decisiones de poda específicas de la compacta:
   dominios (banca/ferrocarriles/etc. se mantiene; *e-procurement* y
   detalles secundarios se condensan). Se conserva el posicionamiento de
   arquitectura y la mención CTO ×2.
+- Se incorpora en `CV_SR_short_es.html` y `CV_SR_short_en.html` un bloque
+  oculto (`.hidden_prompt`) redactado como párrafo narrativo neutral (no
+  imperativo) y anclado a toda la trayectoria (dominios, progresión de
+  rol, Java 8→21, cloud/on-prem, educación y gestión de proyectos). Este
+  bloque **no se usa** en las versiones detalladas.
 
 ### Sidebar
 - Orden ajustado: **Contacto → Aptitudes Principales → Idiomas →

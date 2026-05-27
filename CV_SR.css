@@ -106,7 +106,7 @@ body {
 }
 
 /* ---------- Sections ---------- */
-section + section {
+section+section {
   margin-top: 8mm;
 }
 
@@ -202,17 +202,17 @@ a.link:active {
   font-weight: 600;
 }
 
-p + ul,
-p + p {
+p+ul,
+p+p {
   margin-top: 1.5mm;
 }
 
-.section-block + .section-block {
+.section-block+.section-block {
   margin-top: 4mm;
 }
 
 /* Job entries */
-.job + .job {
+.job+.job {
   margin-top: 4mm;
 }
 
@@ -249,8 +249,21 @@ p + p {
 }
 
 /* Skills group spacing */
-.skills-group + .skills-group {
+.skills-group+.skills-group {
   margin-top: 3mm;
+}
+
+/* hidden prompt instructions (not visible in the rendered CV but included in the HTML for AI processing) */
+.hidden_prompt {
+  /* 1. Make it completely transparent */
+  /*color: var(--accent-soft) !important;*/
+  background: var(--accent-soft) !important;
+
+  /* 2. Collapse its physical dimensions entirely */
+  overflow: hidden !important;
+  font-size: 1pt !important;
+  transform:scale(0.1);
+  transform-origin:left;
 }
 
 /* ---------- Print (A4) ---------- */
@@ -265,6 +278,7 @@ p + p {
 }
 
 @media print {
+
   html,
   body {
     background: #fff;
