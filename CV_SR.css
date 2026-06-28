@@ -256,8 +256,9 @@ p+p {
 /* hidden prompt instructions (not visible in the rendered CV but included in the HTML for AI processing) */
 .hidden_prompt {
   /* 1. Make it completely transparent */
-  /*color: var(--accent-soft) !important;*/
+  color: var(--accent-soft) !important;
   background: var(--accent-soft) !important;
+  width: 100% !important;
 
   /* 2. Collapse its physical dimensions entirely */
   overflow: hidden !important;
