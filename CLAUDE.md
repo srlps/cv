@@ -129,7 +129,12 @@ Usar nivel CEFR + descriptor estándar (ej. *C1 / Profesional*) en lugar de
   Proyectos (PMBOK / PMI)*, emisor real *ILEN · Universidad Nacional de
   Ingeniería (UNI), Perú*, fecha *Noviembre 2022*, duración *130 horas*.
 - Certificaciones en curso se incluyen marcadas como *En curso (AAAA)*
-  cuando son relevantes al objetivo (ej. arquitectura LLM por BSG / IEEE).
+  cuando son relevantes al objetivo. Al completarse, se marca *Completado (AAAA)*
+  aunque el certificado físico/digital esté pendiente de trámite de emisión
+  (no se aclara el trámite en el CV, es detalle interno).
+- **Certified AI/LLM Solution Architect** (BSG Institute, certificado por
+  IEEE): completado en 2026. Nombre oficial del curso — usar tal cual, sin
+  traducir, en ambos idiomas del CV.
 
 ### Voluntariado
 Roles históricos. Se añade un `<p><em>Roles históricos.</em></p>` debajo
