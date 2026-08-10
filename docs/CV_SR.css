@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css?family=Blinker:400,600,700');
+
+/* ---------- Variables & reset ---------- */
+:root {
+  --accent: #10657e;
+  --accent-soft: rgba(16, 101, 126, 0.18);
+  --text: #000;
+  --muted: #46464e;
+  --icon: #343b40;
+  --white: #fff;
+
+  --page-width: 210mm;
+  --page-height: 297mm;
+  --sidebar-width: 60mm;
+  --photo-size: 60mm;
+  --photo-img: 45mm;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: #e5e5e5;
+}
+
+body {
+  font-family: 'Blinker', sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--text);
+  padding: 10mm 0;
+}
+
+/* ---------- Page (A4) ---------- */
+.cv {
+  width: var(--page-width);
+  min-height: var(--page-height);
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------- Header ---------- */
+.cv-header {
+  display: flex;
+  align-items: center;
+  background: var(--accent);
+  color: var(--white);
+}
+
+.cv-photo {
+  flex: 0 0 var(--photo-size);
+  height: var(--photo-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cv-photo img {
+  width: var(--photo-img);
+  height: var(--photo-img);
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--white);
+}
+
+.cv-intro {
+  flex: 1;
+  padding: 10mm 10mm 10mm 5mm;
+}
+
+.cv-intro h1 {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 700;
+  border-bottom: 3px solid var(--white);
+  padding-bottom: 4mm;
+  margin-bottom: 4mm;
+}
+
+.cv-intro .summary {
+  font-weight: 600;
+  text-align: justify;
+  line-height: 1.45;
+}
+
+/* ---------- Body ---------- */
+.cv-body {
+  display: flex;
+}
+
+.cv-sidebar {
+  flex: 0 0 var(--sidebar-width);
+  padding: 10mm 8mm;
+  background: var(--accent-soft);
+}
+
+.cv-main {
+  flex: 1;
+  padding: 10mm 10mm 10mm 8mm;
+  min-width: 0;
+}
+
+/* ---------- Sections ---------- */
+section+section {
+  margin-top: 8mm;
+}
+
+.cv-body section {
+  border-top: 1px solid var(--accent);
+  padding-top: 4mm;
+}
+
+.cv-body section:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+h2 {
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 3mm;
+}
+
+/* ---------- Lists ---------- */
+ul {
+  list-style: none;
+}
+
+ul li {
+  position: relative;
+  padding-left: 4mm;
+  padding-bottom: 1.5mm;
+}
+
+ul li:last-child {
+  padding-bottom: 0;
+}
+
+ul li::before {
+  content: '\2022';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 700;
+}
+
+.cv-main ul {
+  color: var(--muted);
+}
+
+.cv-sidebar ul {
+  color: var(--text);
+}
+
+/* ---------- Contact list ---------- */
+.contact-list li {
+  display: flex;
+  gap: 2.5mm;
+  padding: 0 0 3mm 0;
+  align-items: flex-start;
+  word-break: break-word;
+}
+
+.contact-list li::before {
+  content: none;
+}
+
+.contact-list svg {
+  flex: 0 0 15px;
+  margin-top: 2px;
+}
+
+.contact-list svg path {
+  fill: var(--icon);
+}
+
+a.link {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.link:hover,
+a.link:active {
+  color: blue;
+}
+
+/* ---------- Misc helpers ---------- */
+.bold {
+  font-weight: 700;
+}
+
+.location {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+p+ul,
+p+p {
+  margin-top: 1.5mm;
+}
+
+.section-block+.section-block {
+  margin-top: 4mm;
+}
+
+/* Job entries */
+.job+.job {
+  margin-top: 4mm;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 4mm;
+  font-weight: 700;
+}
+
+.job-company {
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 1.5mm;
+}
+
+.job p {
+  text-align: justify;
+}
+
+.job ul {
+  margin-top: 1.5mm;
+}
+
+.job ul li {
+  text-align: justify;
+}
+
+/* Force a page break (used to push content to the next A4 page) */
+.page-break {
+  height: 0;
+  break-before: page;
+  page-break-before: always;
+}
+
+/* Skills group spacing */
+.skills-group+.skills-group {
+  margin-top: 3mm;
+}
+
+/* hidden prompt instructions (not visible in the rendered CV but included in the HTML for AI processing) */
+.hidden_prompt {
+  /* 1. Make it completely transparent */
+  color: var(--accent-soft) !important;
+  background: var(--accent-soft) !important;
+  width: 100% !important;
+
+  /* 2. Collapse its physical dimensions entirely */
+  overflow: hidden !important;
+  font-size: 1pt !important;
+  transform:scale(0.1);
+  transform-origin:left;
+}
+
+/* ---------- Print (A4) ---------- */
+@page {
+  size: A4;
+  margin: 12mm 0;
+}
+
+/* First page is full-bleed so the colored header reaches the top edge */
+@page :first {
+  margin: 0;
+}
+
+@media print {
+
+  html,
+  body {
+    background: #fff;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  .cv {
+    width: var(--page-width);
+    min-height: 0;
+    margin: 0;
+    box-shadow: none;
+  }
+
+  /* Keep the colored header together at the top of page 1 */
+  .cv-header {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Avoid splitting small blocks awkwardly across pages.
+     Note: do NOT add this to <section>, since the Experience section
+     spans multiple pages and would otherwise force a giant blank gap. */
+  .job,
+  .section-block,
+  .skills-group {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  h2 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  a.link {
+    color: inherit;
+  }
+}
