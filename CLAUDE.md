@@ -9,14 +9,37 @@ Hay dos versiones del CV en dos idiomas (4 archivos HTML + 1 CSS compartido):
 |---|---|---|---|
 | `CV_SR_detailed_es.html` | ES | Detallada | Source of truth de la historia profesional completa. Sirve también como contexto para que un LLM genere variantes cortas u orientadas a otros roles. NO se envía como PDF a postulaciones por defecto (queda en ~5 páginas). |
 | `CV_SR_detailed_en.html` | EN | Detallada | Equivalente en inglés del anterior. |
-| `CV_SR_short_es.html` | ES | Compacta | **Versión a postular** para roles senior dev → arquitecto. Objetivo: 2 páginas. Derivada de la detallada. |
-| `CV_SR_short_en.html` | EN | Compacta | Equivalente en inglés del anterior. |
-| `CV_SR.css` | — | — | Estilo compartido por las 4 versiones. Cambios visuales (sidebar width, justificado, etc.) aplican a todas simultáneamente. |
-| `profile_pic.jpeg` | — | — | Foto referenciada por todos los HTML. |
+| `docs/CV_es.html` | ES | Compacta (pública) | **Versión a postular** para roles senior dev → arquitecto. Objetivo: 2 páginas. Derivada de la detallada. Es la única copia de la versión corta ES (ya no existe `CV_SR_short_es.html` en el root, ver sección "Estructura del repo y GitHub Pages"). |
+| `docs/CV_en.html` | EN | Compacta (pública) | Equivalente en inglés del anterior. |
+| `CV_SR.css` | — | — | Estilo compartido por todas las versiones. Cambios visuales (sidebar width, justificado, etc.) aplican a todas simultáneamente. Duplicado en `docs/CV_SR.css` (ver abajo). |
+| `profile_pic.jpeg` | — | — | Foto referenciada por todos los HTML. Duplicada en `docs/profile_pic.jpeg` (ver abajo). |
 
 Los cambios se aplican en **ambos idiomas** simultáneamente. Cuando el cambio es de
 contenido editorial, se aplica primero en la versión detallada; la compacta se
 regenera/ajusta a partir de ahí.
+
+## Estructura del repo y GitHub Pages
+
+El repo publica CVs vía **GitHub Pages** desde la carpeta `docs/`. Esto impone una
+separación estricta entre dónde vive cada tipo de archivo:
+
+- **`docs/`** contiene **solo** la versión corta/pública lista para compartir o
+  descargar como PDF desde el navegador: `docs/CV_es.html`, `docs/CV_en.html`
+  (nombres fijos, sin sufijo `short`). Estos archivos **no tienen equivalente en
+  el root** — no existen `CV_SR_short_es.html` / `CV_SR_short_en.html` en el
+  root; si hay que editar la versión corta, se edita directamente en `docs/`.
+- **El root** del repo contiene las versiones **detalladas** (`CV_SR_detailed_es.html`,
+  `CV_SR_detailed_en.html`) y cualquier **versión alternativa** orientada a una
+  postulación específica (ej. `CV_SR_hearthsim_en.html`,
+  `CV_SR_hearthsim_short_en.html`). Estas nunca se mueven a `docs/`.
+- **Assets (`CV_SR.css`, `profile_pic.jpeg`) van siempre duplicados**: una copia
+  en el root (usada por las versiones detalladas/alternativas) y otra igual en
+  `docs/` (usada por la versión pública). Cualquier cambio visual en el CSS o
+  cambio de foto se replica manualmente en ambas copias.
+- **Todas las referencias a `CV_SR.css` y `profile_pic.jpeg`, en todos los HTML
+  (root y `docs/`), usan el prefijo `./`** (`./CV_SR.css`, `./profile_pic.jpeg`).
+  Es necesario por cómo GitHub Pages resuelve rutas relativas, y se mantiene
+  igual en el root por consistencia.
 
 ## Objetivo del CV
 Reposicionar el perfil de **"Desarrollador Backend"** a un perfil orientado a
@@ -218,18 +241,19 @@ van al CV.
 - **Globant / salida**: dejó Globant porque Aditi le ofreció algo mejor.
   Estándar omitir motivos de salida en el CV.
 
-## Versión compacta (`CV_SR_short_*.html`)
+## Versión compacta (`docs/CV_es.html` / `docs/CV_en.html`)
 
 Versión derivada de la detallada, optimizada para postular a roles **Senior
-Backend Developer con miras a arquitecto** (2 páginas objetivo). Reusa el
-mismo `CV_SR.css`. Decisiones de poda específicas de la compacta:
+Backend Developer con miras a arquitecto** (2 páginas objetivo). Vive solo en
+`docs/` (ver "Estructura del repo y GitHub Pages"). Reusa el mismo `CV_SR.css`
+(la copia en `docs/`). Decisiones de poda específicas de la compacta:
 
 ### Header / summary
 - Resumen acortado a ~5 líneas. Se elimina la enumeración explícita de
   dominios (banca/ferrocarriles/etc. se mantiene; *e-procurement* y
   detalles secundarios se condensan). Se conserva el posicionamiento de
   arquitectura y la mención CTO ×2.
-- Se incorpora en `CV_SR_short_es.html` y `CV_SR_short_en.html` un bloque
+- Se incorpora en `docs/CV_es.html` y `docs/CV_en.html` un bloque
   oculto (`.hidden_prompt`) redactado como párrafo narrativo neutral (no
   imperativo) y anclado a toda la trayectoria (dominios, progresión de
   rol, Java 8→21, cloud/on-prem, educación y gestión de proyectos). Este
