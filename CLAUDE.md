@@ -156,8 +156,19 @@ Usar nivel CEFR + descriptor estándar (ej. *C1 / Profesional*) en lugar de
   aunque el certificado físico/digital esté pendiente de trámite de emisión
   (no se aclara el trámite en el CV, es detalle interno).
 - **Certified AI/LLM Solution Architect** (BSG Institute, certificado por
-  IEEE): completado en 2026. Nombre oficial del curso — usar tal cual, sin
-  traducir, en ambos idiomas del CV.
+  IEEE): programa desarrollado del 17/11/2025 al 20/07/2026, 96 horas
+  cronológicas, certificado firmado en Lima, Agosto 2026. En el CV se usa
+  *Agosto 2026 · 96 horas* (fecha de emisión, no de fin de programa) para
+  igualar el formato de la certificación PMI (*mes/año · N horas* en la
+  detallada; *año* solo en la compacta, sin mes ni horas). Nombre oficial
+  del curso — usar tal cual, sin traducir, en ambos idiomas del CV.
+- **Link al documento de sustento**: cada certificación lleva un
+  `<a class="link">` debajo (mismo patrón visual que Voluntariado) que
+  apunta al archivo/carpeta de Drive con el certificado. Texto del enlace:
+  *Ver certificado* / *View certificate* (no se muestra la URL cruda). El
+  usuario provee el link; el asistente no inventa URLs. Aplicado en los
+  6 archivos HTML del repo (detallada ES/EN, compacta `docs/` ES/EN,
+  variantes hearthsim).
 
 ### Voluntariado
 Roles históricos. Se añade un `<p><em>Roles históricos.</em></p>` debajo
@@ -167,7 +178,8 @@ Se agregó **Madada** (profesor de fundamentos de programación en Java).
 ## Formación
 Solo Bachiller (UNMSM, Ingeniería de Sistemas, 03/2012 – 06/2019). Se
 añade nota *Tesis en desarrollo para titulación profesional* para señalar
-que el bachiller no es el techo académico actual.
+que el bachiller no es el techo académico actual. Lleva el mismo link a
+documento de sustento (Drive) que las certificaciones — ver regla arriba.
 
 ## Convención de títulos de puesto
 Cuando el título oficial difiere del estándar reconocible para reclutadores
