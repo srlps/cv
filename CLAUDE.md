@@ -338,6 +338,11 @@ Backend Developer con miras a arquitecto** (2 páginas objetivo). Vive solo en
   Título: Desarrollador Backend Semi-Senior / Mid-level Backend Developer. Aplicado ES/EN.
 - [x] **Aditi Consulting** (05/2022 – 04/2026) — cliente Wabtec, proyecto PDS 2.0 (cliente final CN, 05/2022 – 03/2026). Stack Java 21 + Quarkus + Kafka + PostgreSQL/AWS RDS + EKS. Proyecto Wabtec **finalizado**; contrato con Aditi cerrado en 04/2026. Título: Senior. Aplicado ES/EN.
 - [x] **Origen 360 / Pezconfiable** (11/2025 – actualidad) — CTO. Startup peruana de pesca artesanal + trazabilidad. Colaboración por entregables (no fulltime, no part-time formal; freelance-like). Stack Java 21 + Quarkus + Python + PostgreSQL + Keycloak + AWS EC2. Equipo: 1 back (usuario) + 1 front, con LLMs como acelerador. Aplicado ES/EN arriba de Aditi.
+- [x] **Origen 360 — bullet MVP arquitectura de agentes LLM**: agregado bullet describiendo el
+  MVP de monitoreo normativo pesquero (cascada clasificador/extractor, tools vía MCP,
+  trazabilidad + Dead Letter Queue) como capacidad ya incorporada al roadmap de Pezconfiable
+  (no se menciona el origen en la certificación BSG/IEEE). Línea `Stack:` ampliada con
+  LangChain, MCP, Gemini/Mistral. Aplicado en los 4 archivos (detallada ES/EN, compacta ES/EN).
 
 **Nota sobre solapes**: Decidido NO mencionar explícitamente que Origen 360 corre en paralelo a Aditi; las fechas hablan solas (consistente con el tratamiento de Anka/P&T anterior, donde tampoco se etiquetó "paralelo" en el bullet final).
 

@@ -184,7 +184,16 @@
                 plan once the product validates traction.
               </li>
               <li>
-                <em>Stack:</em> Java 21, Quarkus, Python, PostgreSQL, Keycloak, AWS (EC2).
+                <strong>Designed an LLM agent architecture MVP</strong> to automate monitoring of
+                Peruvian fishing regulations (PRODUCE resolutions): a two-model cascade
+                (classifier + extractor with tools exposed via <strong>MCP</strong>), fully
+                traceable persistence (regulation timeline and a <em>Dead Letter Queue</em> for
+                low-confidence cases), and a "never fabricate" policy for regulatory ambiguity —
+                a capability already on Pezconfiable's roadmap.
+              </li>
+              <li>
+                <em>Stack:</em> Java 21, Quarkus, Python, PostgreSQL, Keycloak, AWS (EC2),
+                LangChain, MCP, Gemini Flash/Mistral Large.
               </li>
             </ul>
           </article>
