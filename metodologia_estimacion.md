@@ -286,3 +286,15 @@ sesiones de Copilot, o si cambia tu tarifa de mercado), para que la estimación 
 siguientes sea más precisa. Si un hito real termina consistentemente muy por debajo o muy por
 encima de sus días comprometidos, ajusta el factor 0.5 de la sección 7 (más chico si sueles terminar
 antes, más grande si sueles terminar después) en vez de solo ajustar los rangos por categoría.
+
+## 11. Herramienta: `cotizador_proyectos.xlsx`
+
+Implementación en Excel de las secciones 2–8. Todos los valores de las tablas de arriba son
+parámetros editables en la hoja `Parametros`. La hoja `Prompt IA` tiene el prompt para que un LLM
+devuelva los hitos/features en TSV (Hito, Feature, Categoría, Confirmado); se pega en `Features!A2`
+y las hojas `Cotización` (interna) y `Propuesta cliente` se calculan solas.
+
+El sueldo de referencia de la sección 6 se elige desde una tabla de perfiles (perfil × mercado
+Internacional/Perú, en USD o PEN, más una opción `Custom`) y se pueden agregar perfiles nuevos. El
+cálculo interno es siempre en USD; `Propuesta cliente` se muestra en USD o PEN según un selector,
+usando el tipo de cambio configurado.
