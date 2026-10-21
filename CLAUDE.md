@@ -2,6 +2,9 @@
 
 Este documento captura las decisiones tomadas durante la revisión y mejora del CV.
 
+Instrucciones locales adicionales (no versionadas): ver `CLAUDE.local.md`. Si existe, léelo y
+respétalo al editar `docs/CV_es.html` y `docs/CV_en.html`.
+
 ## Archivos del repo
 Hay dos versiones del CV en dos idiomas (4 archivos HTML + 1 CSS compartido):
 
@@ -265,11 +268,6 @@ Backend Developer con miras a arquitecto** (2 páginas objetivo). Vive solo en
   dominios (banca/ferrocarriles/etc. se mantiene; *e-procurement* y
   detalles secundarios se condensan). Se conserva el posicionamiento de
   arquitectura y la mención CTO ×2.
-- Se incorpora en `docs/CV_es.html` y `docs/CV_en.html` un bloque
-  oculto (`.hidden_prompt`) redactado como párrafo narrativo neutral (no
-  imperativo) y anclado a toda la trayectoria (dominios, progresión de
-  rol, Java 8→21, cloud/on-prem, educación y gestión de proyectos). Este
-  bloque **no se usa** en las versiones detalladas.
 
 ### Sidebar
 - Orden ajustado: **Contacto → Aptitudes Principales → Idiomas →
