@@ -183,8 +183,8 @@
               <li>
                 <strong>Defined the AWS deployment topology optimized for the MVP stage</strong>
                 (backend, PostgreSQL and Keycloak co-located on a single EC2; oceanographic
-                processor on a dedicated EC2), with an explicit evolution plan once the product
-                validates traction.
+                processor on a dedicated EC2), versioned as code with <strong>Terraform</strong> and
+                with an explicit evolution plan once the product validates traction.
               </li>
               <li>
                 <strong>Designed an LLM agent architecture MVP</strong> (classifier + extractor
@@ -193,7 +193,7 @@
               </li>
               <li>
                 <em>Stack:</em> Java 21, Quarkus, Python, PostgreSQL, Keycloak, AWS (EC2),
-                LangChain, MCP, Gemini/Mistral.
+                Terraform, LangChain, MCP, Gemini/Mistral.
               </li>
             </ul>
           </article>
@@ -391,7 +391,7 @@
             <p class="bold">Cloud and deployment:</p>
             <ul>
               <li>AWS (EKS, ECR, RDS, Lambda, SQS, EventBridge, CloudWatch, EC2, S3); GCP (Compute
-                Engine); Azure (AKS, Blob Storage); Docker, Kubernetes</li>
+                Engine); Azure (AKS, Blob Storage); Docker, Kubernetes, Terraform</li>
               <li>CI/CD: Jenkins, GitHub Actions, GitLab CI/CD, Azure DevOps Pipelines</li>
             </ul>
           </div>

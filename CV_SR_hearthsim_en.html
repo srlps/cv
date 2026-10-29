@@ -180,10 +180,11 @@
                 backend, PostgreSQL database and Keycloak co-located on a single EC2 to minimize
                 cost and accelerate delivery, while the oceanographic processor runs on a dedicated
                 EC2 to fully use the VM's capacity. Decisions documented with an explicit evolution
-                plan once the product validates traction.
+                plan once the product validates traction. The environment is versioned as
+                infrastructure as code with <strong>Terraform</strong>.
               </li>
               <li>
-                <em>Stack:</em> Java 21, Quarkus, Python, PostgreSQL, Keycloak, AWS (EC2).
+                <em>Stack:</em> Java 21, Quarkus, Python, PostgreSQL, Keycloak, AWS (EC2), Terraform.
               </li>
             </ul>
           </article>
@@ -554,6 +555,7 @@
               <li>Azure: AKS, Blob Storage <em>(hands-on)</em>; Azure DevOps Pipelines <em>(exposure)</em></li>
               <li>Firebase: Authentication, Hosting, Storage, Cloud Functions</li>
               <li>Docker, Kubernetes</li>
+              <li>Terraform <em>(adopting)</em></li>
               <li>CI/CD: Jenkins, GitHub Actions, GitLab CI/CD, Azure DevOps Pipelines</li>
             </ul>
           </div>
